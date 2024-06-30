@@ -1,8 +1,8 @@
 {
-	"name": "project_frontend",
+	"name": "app",
 	"version": "0.0.1",
 	"scripts": {
-		"setup": "npm i && dfx canister create project_backend && dfx generate project_backend && dfx deploy",
+		"setup": "npm i && dfx canister create contract && dfx generate contract && dfx deploy",
 		"start": "vite --port 3000",
 		"prebuild": "dfx generate",
 		"build": "tsc && vite build",

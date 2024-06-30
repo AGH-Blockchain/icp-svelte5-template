@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 import { connect } from "./canisters";
 import type { ActorSubclass, Identity } from "@dfinity/agent";
-import type { _SERVICE } from '../../../declarations/project_backend/project_backend.did';
+import type { _SERVICE } from '../../../declarations/contract/contract.did';
 
 export const wallet = createWallet()
 

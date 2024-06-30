@@ -11,21 +11,21 @@
       "type": "custom",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     },
-    "project_backend": {
-      "candid": "src/project_backend/project_backend.did",
+    "contract": {
+      "candid": "src/contract/contract.did",
       "declarations": {
         "node_compatibility": true
       },
-      "package": "project_backend",
+      "package": "contract",
       "type": "custom",
-      "build": "./build.sh project_backend",
-      "wasm": "target/wasm32-unknown-unknown/release/project_backend.wasm"
+      "build": "./build.sh contract",
+      "wasm": "target/wasm32-unknown-unknown/release/contract.wasm"
     },
-    "project_frontend": {
-      "dependencies": ["project_backend"],
-      "source": ["src/project_frontend/dist"],
+    "app": {
+      "dependencies": ["contract"],
+      "source": ["src/app/dist"],
       "type": "assets",
-      "workspace": "project_frontend"
+      "workspace": "app"
     }
   },
   "defaults": {

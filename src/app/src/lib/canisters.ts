@@ -1,4 +1,4 @@
-import { createActor, canisterId } from '../../../declarations/project_backend';
+import { createActor, canisterId } from '../../../declarations/contract';
 import { canisterId as identityCanisterId } from '../../../declarations/internet_identity';
 import { AuthClient } from '@dfinity/auth-client';
 
