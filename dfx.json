@@ -17,15 +17,13 @@
         "node_compatibility": true
       },
       "package": "project_backend",
-      "type": "rust"
+      "type": "custom",
+      "build": "./build.sh project_backend",
+      "wasm": "target/wasm32-unknown-unknown/release/project_backend.wasm"
     },
     "project_frontend": {
-      "dependencies": [
-        "project_backend"
-      ],
-      "source": [
-        "src/project_frontend/dist"
-      ],
+      "dependencies": ["project_backend"],
+      "source": ["src/project_frontend/dist"],
       "type": "assets",
       "workspace": "project_frontend"
     }
